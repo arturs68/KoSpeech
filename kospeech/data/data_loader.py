@@ -48,7 +48,7 @@ class SpectrogramDataset(Dataset, SpectrogramParser):
             config: DictConfig,             # set of arguments
             spec_augment: bool = False,     # flag indication whether to use spec-augmentation of not
             dataset_path: str = None,       # path of dataset,
-            audio_extension: str = 'pcm'    # audio extension
+            audio_extension: str = 'flac'    # audio extension
     ) -> None:
         super(SpectrogramDataset, self).__init__(
             feature_extract_by=config.audio.feature_extract_by, sample_rate=config.audio.sample_rate,

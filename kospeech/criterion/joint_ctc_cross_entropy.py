@@ -28,7 +28,7 @@ class JointCTCCrossEntropyLoss(nn.Module):
             reduction='mean',                     # reduction method [sum, mean]
             ctc_weight: float = 0.3,              # weight of ctc loss
             cross_entropy_weight: float = 0.7,    # weight of cross entropy loss
-            blank_id: int = None,                 # identification of blank token
+            blank_id: int = 0,                 # identification of blank token
             smoothing: float = 0.1,               # ratio of smoothing (confidence = 1.0 - smoothing)
     ) -> None:
         super(JointCTCCrossEntropyLoss, self).__init__()

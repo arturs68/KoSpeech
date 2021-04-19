@@ -88,7 +88,7 @@ class SpectrogramParser(AudioParser):
             sos_id: int = 1,                          # start of sentence token`s identification
             eos_id: int = 2,                          # end of sentence token`s identification
             dataset_path: str = None,                 # noise dataset path
-            audio_extension: str = 'pcm',             # audio extension
+            audio_extension: str = 'flac',             # audio extension
     ) -> None:
         super(SpectrogramParser, self).__init__(dataset_path)
         self.del_silence = del_silence

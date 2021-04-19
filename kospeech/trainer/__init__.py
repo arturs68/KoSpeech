@@ -19,9 +19,9 @@ from kospeech.trainer.supervised_trainer import SupervisedTrainer
 
 @dataclass
 class TrainConfig:
-    dataset: str = "kspon"
+    dataset: str = "libri"
     dataset_path: str = "???"
-    transcripts_path: str = "../../../data/transcripts.txt"
+    transcripts_path: str = "/scratch/izar/szalata/data/transcripts.txt"
     output_unit: str = "character"
 
     batch_size: int = 32

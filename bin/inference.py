@@ -30,7 +30,7 @@ from kospeech.models import (
 )
 
 
-def parse_audio(audio_path: str, del_silence: bool = False, audio_extension: str = 'pcm') -> Tensor:
+def parse_audio(audio_path: str, del_silence: bool = False, audio_extension: str = 'flac') -> Tensor:
     signal = load_audio(audio_path, del_silence, extension=audio_extension)
     feature = torchaudio.compliance.kaldi.fbank(
         waveform=Tensor(signal).unsqueeze(0),

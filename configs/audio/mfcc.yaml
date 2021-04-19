@@ -1,4 +1,4 @@
-audio_extension: pcm
+audio_extension: flac
 transform_method: mfcc
 sample_rate: 16000
 frame_length: 20

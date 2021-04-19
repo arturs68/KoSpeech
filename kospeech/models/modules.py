@@ -64,8 +64,8 @@ class LayerNorm(nn.Module):
 
     def forward(self, z: Tensor) -> Tensor:
         mean = z.mean(dim=-1, keepdim=True)
-        std = z.std(dim=-1, keepdim=True)
-        output = (z - mean) / (std + self.eps)
+        std = (z + 1e-6 * torch.randn_like(z)).std(dim=-1, keepdim=True)
+        output = (z - mean) / std
         output = self.gamma * output + self.beta
 
         return output

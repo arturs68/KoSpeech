@@ -17,7 +17,7 @@ from dataclasses import dataclass
 
 @dataclass
 class AudioConfig:
-    audio_extension: str = "pcm"
+    audio_extension: str = "flac"
     sample_rate: int = 16000
     frame_length: int = 20
     frame_shift: int = 10
