@@ -24,7 +24,7 @@ class TrainConfig:
     transcripts_path: str = "/scratch/izar/szalata/data/transcripts.txt"
     output_unit: str = "character"
 
-    batch_size: int = 32
+    batch_size: int = 64
     save_result_every: int = 1000
     checkpoint_every: int = 5000
     print_every: int = 10
